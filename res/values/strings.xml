@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="refreshData">Refresh Data</string>
+	<string name="buttonFinalSubmit">Submit</string>
+	<string name="emailUs">Email Feedback</string>
+	<string name="aboutUs">About Us</string>
+	<string name="descriptionLabel">Description</string>
+	<string name="emailLabel">Your Email</string>
+	<string name="locationLabel">Incident Location</string>
+	<string name="departmentLabel">Offenders Department</string>
+	<string name="bribeLabel">Monetary Amount (Rs.)</string>
+	<string name="offenderLabel">Offenders Name</string>
+	<string name="app_name">CorruptionTrak India</string>
+	<string name="titleLabel">Title</string>
+	<string name="emailEntryDetails">Your email address will be kept anonymous. We ask
+		for your address to contact you for any actionable events that may
+		arise in the future.\n</string>
+	<string name="buttonSubmit">Report Incident</string>
+
+	<string name="aboutUsDetails">CorruptionTrak aims to deter corruption in India
+		through the power of data supplied by the common man. We crowd-source
+		corruption reports with the aim of exposing guilty authorities and
+		organizations.\n\nPlease email us with your views, suggestions and
+		enquiries at corruptiontrak@gmail.com</string>
+</resources>

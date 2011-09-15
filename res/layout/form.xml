@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/scroll" android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:background="#FFF" android:scrollbarAlwaysDrawVerticalTrack="true"
+		android:fadeScrollbars="true" android:scrollbarStyle="insideInset">
+
+		<LinearLayout android:layout_height="fill_parent"
+			android:layout_width="fill_parent" android:id="@+id/LinearLayout01"
+			android:orientation="vertical" android:layout_weight="0.15"
+			android:paddingTop="6dp" android:paddingRight="7dp"
+			android:paddingBottom="3dp" android:paddingLeft="7dp">
+			<TextView android:textSize="16dp" android:typeface="normal"
+				android:layout_weight="0.67" android:layout_height="fill_parent"
+				android:layout_width="fill_parent" android:textStyle="bold"
+				android:textColor="#111" android:gravity="center_vertical"
+				android:text="@string/titleLabel" android:paddingLeft="3dp"
+				android:paddingBottom="3dp"></TextView>
+			<EditText android:layout_width="fill_parent"
+				android:layout_weight="0.33" android:textColor="#569"
+				android:layout_height="wrap_content" android:textColorHint="#FDD"
+				android:id="@+id/titleEditText" android:imeOptions="actionNext"
+				android:inputType="textEmailSubject" android:ellipsize="start"></EditText>
+		</LinearLayout>
+
+
+		<LinearLayout android:layout_height="fill_parent"
+			android:layout_width="fill_parent" android:id="@+id/LinearLayout01"
+			android:orientation="vertical" android:layout_weight="0.15"
+			android:paddingTop="3dp" android:paddingRight="7dp"
+			android:paddingBottom="3dp" android:paddingLeft="7dp">
+			<TextView android:textSize="16dp" android:typeface="normal"
+				android:layout_weight="0.67" android:layout_height="fill_parent"
+				android:layout_width="fill_parent" android:textStyle="bold"
+				android:textColor="#111" android:gravity="center_vertical"
+				android:text="@string/locationLabel" android:paddingLeft="3dp"
+				android:paddingBottom="3dp"></TextView>
+			<EditText android:layout_width="fill_parent"
+				android:layout_weight="0.33" android:textColor="#569"
+				android:layout_height="fill_parent" android:textColorHint="#FDD"
+				android:id="@+id/locationEditText" android:imeOptions="actionNext"
+				android:inputType="textLongMessage"></EditText>
+		</LinearLayout>
+
+		<LinearLayout android:layout_height="fill_parent"
+			android:layout_width="fill_parent" android:id="@+id/LinearLayout01"
+			android:orientation="vertical" android:layout_weight="0.15"
+			android:paddingTop="3dp" android:paddingRight="7dp"
+			android:paddingBottom="3dp" android:paddingLeft="7dp">
+			<TextView android:textSize="16dp" android:typeface="normal"
+				android:layout_weight="0.67" android:layout_height="fill_parent"
+				android:layout_width="fill_parent" android:textStyle="bold"
+				android:textColor="#111" android:gravity="center_vertical"
+				android:text="@string/bribeLabel" android:paddingLeft="3dp"
+				android:paddingBottom="3dp"></TextView>
+			<EditText android:layout_width="fill_parent"
+				android:layout_weight="0.33" android:textColor="#569"
+				android:layout_height="fill_parent" android:textColorHint="#FDD"
+				android:id="@+id/bribeEditText" android:numeric="decimal"
+				android:inputType="numberDecimal"></EditText>
+		</LinearLayout>
+
+		<LinearLayout android:layout_height="fill_parent"
+			android:layout_width="fill_parent" android:id="@+id/LinearLayout01"
+			android:orientation="vertical" android:layout_weight="0.15"
+			android:paddingTop="3dp" android:paddingRight="7dp"
+			android:paddingBottom="3dp" android:paddingLeft="7dp">
+			<TextView android:textSize="16dp" android:typeface="normal"
+				android:layout_weight="0.67" android:layout_height="fill_parent"
+				android:layout_width="fill_parent" android:textStyle="bold"
+				android:textColor="#111" android:gravity="center_vertical"
+				android:text="@string/offenderLabel" android:paddingLeft="3dp"
+				android:paddingBottom="3dp"></TextView>
+			<EditText android:layout_width="fill_parent"
+				android:layout_weight="0.33" android:textColor="#569"
+				android:layout_height="fill_parent" android:textColorHint="#FDD"
+				android:id="@+id/offenderEditText" android:imeOptions="actionNext"
+				android:inputType="textLongMessage"></EditText>
+		</LinearLayout>
+
+		<LinearLayout android:layout_height="fill_parent"
+			android:layout_width="fill_parent" android:id="@+id/LinearLayout01"
+			android:orientation="vertical" android:layout_weight="0.15"
+			android:paddingTop="3dp" android:paddingRight="7dp"
+			android:paddingBottom="3dp" android:paddingLeft="7dp">
+			<TextView android:textSize="16dp" android:typeface="normal"
+				android:layout_weight="0.67" android:layout_height="fill_parent"
+				android:layout_width="fill_parent" android:textStyle="bold"
+				android:textColor="#111" android:gravity="center_vertical"
+				android:text="@string/departmentLabel" android:paddingLeft="3dp"
+				android:paddingBottom="3dp"></TextView>
+			<EditText android:layout_width="fill_parent"
+				android:layout_weight="0.33" android:textColor="#569"
+				android:layout_height="fill_parent" android:textColorHint="#FDD"
+				android:id="@+id/departmentEditText" android:imeOptions="actionNext"
+				android:inputType="textPersonName"></EditText>
+		</LinearLayout>
+
+		<!-- <LinearLayout android:layout_height="fill_parent" android:layout_width="fill_parent" 
+			android:id="@+id/LinearLayout01" android:orientation="horizontal" android:layout_weight="0.15" 
+			android:paddingTop="3dp" android:paddingRight="3dp" android:paddingBottom="3dp" 
+			android:paddingLeft="3dp"> <TextView android:textSize="16dp" android:typeface="normal" 
+			android:layout_weight="0.67" android:layout_height="fill_parent" android:layout_width="fill_parent" 
+			android:textStyle="bold" android:textColor="#FFF" android:gravity="center_vertical|center" 
+			android:text="@string/emailLabel"></TextView> <EditText android:layout_width="fill_parent" 
+			android:layout_weight="0.33" android:textColor="#569" android:layout_height="fill_parent" 
+			android:textColorHint="#FDD" android:background="@drawable/white" android:id="@+id/emailEditText"></EditText> 
+			</LinearLayout> -->
+
+		<LinearLayout android:layout_height="fill_parent"
+			android:layout_width="fill_parent" android:id="@+id/LinearLayout01"
+			android:orientation="vertical" android:layout_weight="0.15"
+			android:paddingTop="3dp" android:paddingRight="7dp"
+			android:paddingBottom="6dp" android:paddingLeft="7dp">
+			<TextView android:textSize="16dp" android:typeface="normal"
+				android:layout_weight="0.67" android:layout_height="fill_parent"
+				android:layout_width="fill_parent" android:textStyle="bold"
+				android:textColor="#111" android:gravity="center_vertical"
+				android:text="@string/descriptionLabel" android:paddingLeft="3dp"
+				android:paddingBottom="3dp"></TextView>
+			<EditText android:layout_width="fill_parent"
+				android:layout_weight="0.33" android:textColor="#569"
+				android:layout_height="fill_parent" android:textColorHint="#FDD"
+				android:id="@+id/descriptionEditText" android:imeOptions="actionDone"
+				android:inputType="textLongMessage"></EditText>
+		</LinearLayout>
+
+
+		<Button android:layout_gravity="center" android:id="@+id/buttonSubmit"
+			android:text="@string/buttonSubmit" android:layout_width="fill_parent"
+			android:ellipsize="start" android:layout_height="fill_parent"
+			android:typeface="normal" android:layout_weight="0.2"
+			android:background="@drawable/blue" android:textStyle="bold"
+			android:textColor="#FFF" android:textSize="19dp"></Button>
+
+	</LinearLayout>
+</ScrollView>
