@@ -2,17 +2,16 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical" android:layout_width="fill_parent"
-	android:layout_height="wrap_content" android:background="#FFF">
+	android:layout_height="wrap_content" android:background="@drawable/list_item_selector">
 
 	<LinearLayout android:orientation="horizontal"
 		android:layout_width="fill_parent" android:layout_height="wrap_content"
-		android:background="#FFF"
 		android:paddingLeft="8dip" android:paddingRight="8dp"
 		android:paddingTop="6dip">
 		<TextView android:id="@+id/listingList1"
 			android:layout_height="wrap_content" android:layout_width="wrap_content"
 			android:text="Title" android:textColor="#111" android:gravity="left|center_vertical"
-			android:textSize="16dp" android:textStyle="bold"
+			android:textSize="14dp" android:textStyle="bold"
 			android:layout_weight="0.8"></TextView>
 		<TextView android:id="@+id/listingList2"
 			android:layout_height="wrap_content" android:layout_width="wrap_content"
@@ -23,7 +22,7 @@
 	<TextView android:id="@+id/listingList3"
 		android:layout_height="wrap_content" android:layout_width="fill_parent"
 		android:textColor="#111" android:gravity="left|center_vertical"
-		android:textSize="15dp" android:paddingLeft="8dip"
+		android:textSize="14dp" android:paddingLeft="8dip"
 		android:paddingRight="8dp"></TextView>
 
 	<TextView android:id="@+id/listingList4"

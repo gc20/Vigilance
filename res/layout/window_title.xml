@@ -5,7 +5,7 @@
     android:layout_width="fill_parent"
     android:layout_height="40dip"
     android:gravity="center_vertical"
-    android:background="#933A03">
+    android:background="#863A04">
  
     <ImageView
         android:id="@+id/header"

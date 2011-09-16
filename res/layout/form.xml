@@ -133,10 +133,11 @@
 
 		<Button android:layout_gravity="center" android:id="@+id/buttonSubmit"
 			android:text="@string/buttonSubmit" android:layout_width="fill_parent"
-			android:ellipsize="start" android:layout_height="fill_parent"
-			android:typeface="normal" android:layout_weight="0.2"
-			android:background="@drawable/blue" android:textStyle="bold"
-			android:textColor="#FFF" android:textSize="19dp"></Button>
+			android:ellipsize="start" android:layout_height="50dp"
+			android:typeface="normal" android:layout_weight="0.1"
+			android:background="#863A04" android:textStyle="bold"
+			android:textColor="#FFF" android:textSize="19dp"
+			android:paddingLeft="3dp"></Button>
 
 	</LinearLayout>
 </ScrollView>

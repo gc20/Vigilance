@@ -42,7 +42,7 @@ public class ListingListAdapter extends ArrayAdapter<Incident> {
         //int categoryNum = 0; // Test
         if (in != null) {
 			
-        	TextView in1 = (TextView) v.findViewById(R.id.listingList1);
+        	TextView in1 = (TextView) v.findViewById(R.id.listingList1); 
 			TextView in2 = (TextView) v.findViewById(R.id.listingList2);
 			TextView in3 = (TextView) v.findViewById(R.id.listingList3);
 			TextView in4 = (TextView) v.findViewById(R.id.listingList4);
@@ -124,10 +124,16 @@ public class ListingListAdapter extends ArrayAdapter<Incident> {
 							in4.setText (distanceString);
 						}
 						else
+						{
 							in4.setVisibility (8); // Remove textview
+							in3.setPadding(8, 0, 8, 6);
+						}
 					}
 					else
+					{
 						in4.setVisibility (8); // Remove textview
+						in3.setPadding(8, 0, 8, 6);
+					}
 				}
 				catch (Exception e)
 				{ in4.setVisibility (8); }

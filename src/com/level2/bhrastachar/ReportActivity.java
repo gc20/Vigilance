@@ -69,7 +69,7 @@ public class ReportActivity extends Activity implements OnClickListener,
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.form);
-
+		
 		buttonSubmit = (Button) findViewById(R.id.buttonSubmit);
 		buttonSubmit.setOnClickListener(this);
 		
@@ -88,7 +88,7 @@ public class ReportActivity extends Activity implements OnClickListener,
 		// Submission progress dialog
 		pd = new ProgressDialog(this);
 		pd.setTitle("Submitting ...");
-		pd.setMessage("Sending information");
+		pd.setMessage("Sending information ");
 		pd.setIndeterminate(true);
 		pd.setCancelable(false);
 

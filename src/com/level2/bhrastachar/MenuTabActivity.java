@@ -4,13 +4,15 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Date;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
+import org.apache.http.params.HttpParams;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -50,7 +52,7 @@ public class MenuTabActivity extends TabActivity {
 	
 	/*// Stores user location
 	public double userLoc [] = new double [2];
-	public boolean userLocationAvailable = false;*/  
+	public boolean userLocationAvailable = false; */  
 	
 	// Display options for initial lack of data
 	AlertDialog alert = null;
@@ -128,7 +130,7 @@ public class MenuTabActivity extends TabActivity {
 	    setupTab(new TextView(this), "View List", intent);
 	    
 		// Begin with the first tab
-	    tabHost.setCurrentTab(1);
+	    tabHost.setCurrentTab(0);
 	    
 	    // Add custom title
 	    getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.window_title);
@@ -173,7 +175,18 @@ public class MenuTabActivity extends TabActivity {
 		//HTTP post
 		try
 		{
-			HttpClient httpclient = new DefaultHttpClient();
+			// Prepare for potential timeouts
+			HttpParams httpParameters = new BasicHttpParams();
+			// Set the timeout in milliseconds until a connection is established.
+			int timeoutConnection = 3000;
+			HttpConnectionParams.setConnectionTimeout(httpParameters, timeoutConnection);
+			// Set the default socket timeout for waiting for data.
+			int timeoutSocket = 5000;
+			HttpConnectionParams.setSoTimeout(httpParameters, timeoutSocket);
+
+			
+			// Setup HTTP variables
+			HttpClient httpclient = new DefaultHttpClient(httpParameters);
 			HttpPost httppost = new HttpPost(url + "getReport.php");
 			Log.d (TAG, url+"getReport.php ");
 			//httppost.setEntity(new UrlEncodedFormEntity(IncidentList));
@@ -184,8 +197,8 @@ public class MenuTabActivity extends TabActivity {
 		catch(Exception e){
 			Log.d(TAG, "Error in http connection"+e.toString());
 			// Sample data xx
-			IncidentList.add(new Incident("Paid Bribe to Police Office", "Irritated 1", "Kilpauk, Chennai", 13.08, 80.23, new Date ().getTime() - 10000, "Department1", 90, "Offender1", "email1@gmail.com"));
-			IncidentList.add(new Incident("Police office did not file FIR", "Frustrated 2. This is going to be a very long message because I wish to test the length of the message. In other words, its elasticity.", "MG Road, Bangalore, Karnataka", 12.970214, 77.56029, new Date ().getTime() - 5000, "Department2", 95, "Offender2", "email2@gmail.com"));
+			// IncidentList.add(new Incident("Paid Bribe to Police Office", "Irritated 1", "Kilpauk, Chennai", 13.08, 80.23, new Date ().getTime() - 10000, "Department1", 90, "Offender1", "email1@gmail.com"));
+			// IncidentList.add(new Incident("Police office did not file FIR", "Frustrated 2. This is going to be a very long message because I wish to test the length of the message. In other words, its elasticity.", "MG Road, Bangalore, Karnataka", 12.970214, 77.56029, new Date ().getTime() - 5000, "Department2", 95, "Offender2", "email2@gmail.com"));
 			
 		}
 
@@ -212,13 +225,13 @@ public class MenuTabActivity extends TabActivity {
 		}
 
 		//Parse data
-		IncidentList.clear();
 		try
 		{
 	      	JSONArray jArray = new JSONArray(result);
 	      	JSONObject json_data=null;
 	      	Incident tempIncident;
-	      	IncidentList.clear();
+	      	if (jArray.length() != 0)
+	      		IncidentList.clear();
 	      	
 	      	for(int i=(jArray.length()-1);i>=0;i--)
 	      	{
@@ -309,9 +322,10 @@ public class MenuTabActivity extends TabActivity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 
+
 		switch (item.getItemId()) {
 		
-			case R.id.refresh:
+		case R.id.refresh:
 				
 				// Display progress dialog
 				String childActivity = getCurrentActivity().toString();

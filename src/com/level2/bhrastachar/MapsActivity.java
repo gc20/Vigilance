@@ -36,7 +36,7 @@ public class MapsActivity extends MapActivity {
 	@Override
 	protected void onCreate(Bundle arg0) {
 
-		Log.d(TAG, "On create");
+		Log.d(TAG, "On create ");
 		
 		super.onCreate(arg0);
 		Log.d (TAG, "After super create");
@@ -47,8 +47,7 @@ public class MapsActivity extends MapActivity {
 
 		IncidentList = ((MenuTabActivity)this.getParent()).IncidentList;
 		
-		// Initialize variables for overlap
-		mapOverlays = mapView.getOverlays();
+		// Obtain accident overlay marker
 		drawable = this.getResources().getDrawable(R.drawable.ic_bullet_key_permission);
 		
 		// Add overlays
@@ -96,8 +95,11 @@ public class MapsActivity extends MapActivity {
 		// Initialize itemized overlay
 		MapsOverlayDraw itemizedoverlay = new MapsOverlayDraw(drawable, this);
 		
+		// Obtain map overlays
+		mapOverlays = mapView.getOverlays();
+		
 		// Remove existing overlays
-		mapView.getOverlays().clear();
+		mapOverlays.clear();
 		
 		// Add alerts
 		int size = IncidentList.size();

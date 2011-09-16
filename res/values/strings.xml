@@ -15,7 +15,7 @@
 	<string name="emailEntryDetails">Your email address will be kept anonymous. We ask
 		for your address to contact you for any actionable events that may
 		arise in the future.\n</string>
-	<string name="buttonSubmit">Report Incident</string>
+	<string name="buttonSubmit">Submit Incident Report</string>
 
 	<string name="aboutUsDetails">CorruptionTrak aims to deter corruption in India
 		through the power of data supplied by the common man. We crowd-source

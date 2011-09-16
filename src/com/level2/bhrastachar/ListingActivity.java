@@ -30,8 +30,9 @@ public class ListingActivity extends ListActivity {
 	public void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
+	    
 		setContentView(R.layout.listing);
-		Log.d(TAG, "On create");
+	    Log.d(TAG, "On create");
 		
 		// Let tab activity handle updating of array list
 		IncidentList = ((MenuTabActivity) (this.getParent())).IncidentList;
@@ -77,7 +78,7 @@ public class ListingActivity extends ListActivity {
 		
 		String incidentDetails = "";
 		if (tempIncident.getTitle().equals(""))
-			incidentDetails += "Title: \nUntitled\n\n";
+			incidentDetails += "Title: \nUntitled\n\n"; 
 		else
 			incidentDetails += "Title: \n" + tempIncident.getTitle() + "\n\n";
 		if (!tempIncident.getLocation().equals(""))
@@ -96,7 +97,7 @@ public class ListingActivity extends ListActivity {
 		
 		AlertDialog.Builder builder = new AlertDialog.Builder(ListingActivity.this);
 		builder.setMessage(incidentDetails)
-		.setCancelable(false).setPositiveButton("OK", 
+		.setCancelable(false).setPositiveButton("Close", 
 				new DialogInterface.OnClickListener() {
 		           @Override
 				public void onClick(DialogInterface dialog, int id) {

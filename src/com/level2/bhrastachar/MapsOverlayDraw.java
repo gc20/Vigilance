@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 
@@ -41,7 +42,7 @@ public class MapsOverlayDraw extends ItemizedOverlay<OverlayItem>{
 	public int size() {
 	  return mOverlays.size();
 	}
-
+	
 	
 	// When user taps on item
 	@Override
@@ -54,6 +55,13 @@ public class MapsOverlayDraw extends ItemizedOverlay<OverlayItem>{
 		  AlertDialog.Builder dialog = new AlertDialog.Builder(context);
 		  dialog.setTitle(item.getTitle());
 		  dialog.setMessage(item.getSnippet());
+		  dialog.setCancelable(false).setPositiveButton("Close" , 
+					new DialogInterface.OnClickListener() {
+			           @Override
+					public void onClick(DialogInterface dialog, int id) {
+			        	   dialog.cancel();
+			           }
+			       });
 		  dialog.show();
 		  return true;
 	}
