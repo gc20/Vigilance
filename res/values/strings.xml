@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="blank"></string>
+	<string name="tabMap">Map</string>
+	<string name="tabList">Details</string>
+	<string name="refreshData">Refresh Data</string>
+	<string name="app_name">Vigilance</string>
+	<string name="url_main">dev.semantics3.com:8080/</string>
+	<string name="url_retrieve_list">lists</string>
+	<string name="categoryLabel">Category</string>
+	<string name="currentLocation">Current Location</string>
+	<string name="clearForm">Clear Form</string>
+	<string name="policeCall">Call Police</string>
+	<string name="mapKey"></string>
+	
+</resources>
